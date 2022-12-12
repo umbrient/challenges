@@ -1,0 +1,10 @@
+<div style='display:flex;justify-content: space-between;'>
+    <span>Created at <%= @post.created_at %></span><br>
+    <span>Last updated at <%= @post.updated_at %></span>
+    <span><%= link_to "Edit", edit_post_path(@post.id) %> </span>
+    <span><%= button_to  "Delete", post_path(@post.id), :method => :delete
+ %> </span>
+</div>
+
+<h1><%=  @post.title %></h1>
+<p><%= @post.body.first(100)    %></p>
